@@ -36,7 +36,7 @@ export const heroSlides = [
   {
     image: "/assets/carousel/Connecting Capital Ecosystems Innovation (1).png",
     alt: "A glowing green globe centred on the African continent, connected by a network of points",
-    headline: ["Closing the Gap Between", "Ambition and Execution."],
+    headline: ["Connecting Capital", "Innovation and Ecosystems."],
     subheadline:
       "Turning promising energy, climate and resource solutions into investable, scalable businesses.",
     position: "object-center",

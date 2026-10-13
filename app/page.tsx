@@ -137,7 +137,7 @@ export default function HomePage() {
         <Container>
           <Eyebrow>Why ClimeNergies</Eyebrow>
           <SectionHeading lines={["Global Rigor.", "African Depth. Real Execution."]} />
-          <Prose className="mt-8 max-w-5xl">
+          <Prose className="mt-8 max-w-7xl">
             <p>
               Africa needs advisory grounded in its own markets and institutions, not adapted global playbooks. We
               combine the technical standards of global institutions with market knowledge earned across
@@ -232,7 +232,7 @@ export default function HomePage() {
           <div className="mt-12 grid gap-10 md:grid-cols-12 md:gap-14">
             <div className="relative aspect-4/5 overflow-hidden bg-forest-900 md:col-span-4 lg:aspect-auto lg:h-full">
               <Image
-                src={founder.image}
+                src="/assets/our-team/Adedoyin_Pearse.webp"
                 alt={`Portrait of ${founder.name}`}
                 fill
                 sizes="(min-width: 768px) 400px, 100vw"

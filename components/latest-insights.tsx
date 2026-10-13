@@ -11,7 +11,7 @@ export function LatestInsights() {
             <Eyebrow>Insights &amp; Perspective</Eyebrow>
             <SectionHeading lines={["Latest From ClimeNergies"]} />
           </div>
-          <ButtonLink href="/blog" size="sm">
+          <ButtonLink href="/blog" size="sm" className="!bg-[#012F23] !text-white !px-16 !py-2">
             View All
           </ButtonLink>
         </div>
