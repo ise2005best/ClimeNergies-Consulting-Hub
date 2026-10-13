@@ -538,9 +538,5 @@ const digestFor = (date: string) => {
   return digest;
 };
 
-/** The three cards in the home page's "Latest" section, each with its own photo. */
-export const insights = [
-  { ...digestFor("April 2026"), image: "/assets/blog/iStock-1201144154.jpg" },
-  { ...digestFor("May 2026"), image: "/assets/contact/Investment & Climate Finance (1).jpg" },
-  { ...digestFor("June 2026"), image: "/assets/home-page/Latest Section 1 Image .jpg" },
-];
+/** The three cards in the "Insights & Perspective" section. They show the same covers as the blog page. */
+export const insights = [digestFor("June 2026"), digestFor("July 2026"), digestFor("August 2026")];

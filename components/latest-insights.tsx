@@ -19,13 +19,14 @@ export function LatestInsights() {
           {insights.map((post) => (
             <li key={post.href}>
               <article className="group flex h-full flex-col">
-                <div className="relative aspect-4/3 overflow-hidden bg-forest-100">
+                <div className="relative aspect-4/3 overflow-hidden bg-forest-50">
+                  {/* Same treatment as the blog page: the whole cover, uncropped. Extra top padding clears the label. */}
                   <Image
-                    src={post.image}
+                    src={post.cover}
                     alt=""
                     fill
                     sizes="(min-width: 768px) 400px, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain px-6 pt-14 pb-6 drop-shadow-[0_10px_18px_rgba(0,42,32,0.25)] transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   <span className="absolute top-4 left-4 bg-white/90 px-3 py-1 font-ui text-xs font-medium text-forest-900 backdrop-blur">
                     ClimeNergies Digest
