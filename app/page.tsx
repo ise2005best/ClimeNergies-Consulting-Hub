@@ -6,7 +6,7 @@ import { MissionVision } from "@/components/mission-vision";
 import { GetInTouch } from "@/components/get-in-touch";
 import { LatestInsights } from "@/components/latest-insights";
 import { ButtonLink, Container, Eyebrow, StatsBadge, Prose, SectionHeading } from "@/components/ui";
-import { approach, clientGroups, founderIntro, heroSlides, practiceAreaHref, practiceAreas, team } from "@/lib/content";
+import { approach, clientGroups, founderFullName, founderIntro, heroSlides, practiceAreaHref, practiceAreas, team } from "@/lib/content";
 
 const approachIcons = {
   search: FaMagnifyingGlass,
@@ -243,7 +243,16 @@ export default function HomePage() {
               <p className="mt-1 font-ui text-sm font-semibold text-forest-700">{founder.role}</p>
               <Prose className="mt-6">
                 {founderIntro.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>
+                    {paragraph.startsWith(founderFullName) ? (
+                      <>
+                        <strong className="font-semibold">{founderFullName}</strong>
+                        {paragraph.slice(founderFullName.length)}
+                      </>
+                    ) : (
+                      paragraph
+                    )}
+                  </p>
                 ))}
               </Prose>
             </div>

@@ -473,8 +473,11 @@ export const team: TeamMember[] = [
   },
 ];
 
+/** Shown in semibold where it opens the founder intro on the home page. */
+export const founderFullName = "Adedoyin ('Doyin') Pearse";
+
 export const founderIntro = [
-  "Adedoyin ('Doyin) Pearse is a senior energy executive, lawyer, and strategic adviser with over 25 years of experience across oil and gas, power, renewables, energy transition, climate-tech investing, and resource governance spanning Africa and global markets.",
+  `${founderFullName} is a senior energy executive, lawyer, and strategic adviser with over 25 years of experience across oil and gas, power, renewables, energy transition, climate-tech investing, and resource governance spanning Africa and global markets.`,
   "She began her career in legal practice at The Law Union before building advisory expertise at EY and Deloitte, and went on to serve as pioneer General Counsel at Siemens Energy Nigeria, leading transaction advisory on landmark projects including the Azura Power Plant (461 MW), Geregu II (434 MW), and the Siemens Federal Government Presidential Power Initiative.",
   "As Global Investment Professional and Ventures Lead, Africa, at Siemens Energy Ventures, she contributed to over €50M in clean energy and climate-tech investments across hydrogen, Power-to-X, and carbon management. She founded ClimeNergies to bring that depth of experience directly to Africa's most consequential energy, resource, and industrial challenges.",
   "A 2024 Yale Climate Leaders Fellow, she holds an MBA from Cambridge Judge Business School, an LLM in Petroleum Law and Policy from the University of Dundee, and a law degree from the University of Lagos.",
