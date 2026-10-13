@@ -43,37 +43,292 @@ export const heroSlides = [
   },
 ];
 
-export const practiceAreas = [
+export type PracticeArea = {
+  slug: string;
+  title: string;
+  /** Short summary used in the home page "What We Do" accordion. */
+  description: string;
+  tagline: string;
+  intro: string[];
+  coverage: { title: string; description: string }[];
+  image: string;
+  imageAlt: string;
+};
+
+export const practiceAreas: PracticeArea[] = [
   {
+    slug: "oil-gas-energy-transition",
     title: "Oil, Gas & Energy Transition",
     description:
       "We help governments, national oil companies, and investors navigate petroleum regulation, structure transactions across the value chain, monetise gas transition strategies, and position hydrocarbon assets for resilience and long-term value in a changing market.",
+    tagline: "Managing Africa's Hydrocarbons for the Transition Ahead",
+    intro: [
+      "Oil and gas remain central to many African economies, funding public revenues, driving exports and powering growth. The challenge is not choosing between hydrocarbons and the transition, but managing both well in a changing global market.",
+      "Tighter ESG mandates, DFIs pulling back from fossil fuel finance, decarbonisation pressure and stranded asset risk are reshaping the sector, and capital will follow those who adapt.",
+      "We advise governments, national and international oil companies, investors and developers on managing, monetising and positioning hydrocarbon assets within this evolving landscape.",
+    ],
+    coverage: [
+      {
+        title: "Petroleum Regulatory Frameworks",
+        description:
+          "Advisory on petroleum regulatory frameworks, host community, upstream fiscal terms, midstream and downstream licensing, and equivalent frameworks across African jurisdictions.",
+      },
+      {
+        title: "Petroleum Value Chain Advisory",
+        description:
+          "Legal, regulatory, and commercial advisory across the oil and gas value chain, covering upstream contracts (licensing, PSCs, JVs, farm-ins) and midstream gas/LNG export structures and downstream distribution frameworks alongside EPC, long-term service agreements, offtake structures, and project finance documentation.",
+      },
+      {
+        title: "Gas Monetisation & Energy Transition",
+        description:
+          "Gas monetisation, domestic supply obligations, LNG structuring, flare reduction and commercialisation frameworks across Africa, with gas positioned for transition pathways, climate commitments, investor expectations and stranded asset risk.",
+      },
+      {
+        title: "Regulatory, Compliance & Government Advisory",
+        description:
+          "Petroleum sector governance, fiscal regime design, regulatory reform, market entry, local content, anti-corruption, environmental, social and governance requirements, and engagement with governments and regulators across African markets.",
+      },
+    ],
+    image: "/assets/practice-areas/Latest Oil Gas Energy Transition Practice Area .jpg",
+    imageAlt: "Pressurised storage tanks and pipework at a gas processing plant",
   },
   {
-    title: "Power and Energy Access",
+    slug: "power-energy-access",
+    title: "Power & Energy Access",
     description:
       "We advise governments, utilities, developers and investors across the power value chain, from grid-scale generation to off-grid access, on sector reform, regulation, renewables integration and transition finance, helping build bankable markets and close clean energy deals.",
+    tagline: "Derisking Africa's Power Systems, From Policy to Execution.",
+    intro: [
+      "Africa's power gap is not just a technology challenge. Fragmented regulation, weak offtake structures, grid constraints, and limited legal certainty continue to hold back investment and delivery.",
+      "We advise governments, investors, developers, utilities, grid operators, and development finance institutions on the legal, regulatory, and commercial frameworks needed to finance and deliver power projects across conventional generation, renewables, and energy access.",
+    ],
+    coverage: [
+      {
+        title: "Power Sector Reform & Electricity Regulation",
+        description:
+          "Electricity sector regulation, market structure, tariff reform, and regulatory frameworks governing generation, transmission, and distribution. Legal and institutional design of independent regulatory bodies, electricity market rules, and grid access frameworks.",
+      },
+      {
+        title: "Project Development & Procurement",
+        description:
+          "Advisory across conventional generation, renewables, and gas-to-power from permitting through procurement, financing, construction, and commissioning. Advisory on competitive procurement programs, auction design, and standardized PPA frameworks.",
+      },
+      {
+        title: "Power Purchase Agreements & Offtake Structures",
+        description:
+          "Drafting, review, and negotiation of power purchase agreements, offtake arrangements, and grid connection agreements, including bankability advisory for DFI and commercial lender financing.",
+      },
+      {
+        title: "Energy Access & Distributed Systems",
+        description:
+          "Advisory on energy access frameworks, mini-grid licensing, rural electrification policy, and the commercial and financing structures supporting last-mile energy access delivery.",
+      },
+      {
+        title: "Clean Energy Finance & Investment Structuring",
+        description:
+          "Legal and commercial structuring of clean energy investments, project finance, equity structures, DFI requirements, green bond issuance, and blended finance for renewable energy projects.",
+      },
+      {
+        title: "Energy Transition Policy & NDC Implementation",
+        description:
+          "National energy transition plans, Nationally Determined Contribution (NDC) implementation frameworks, and the legal and regulatory reforms needed to accelerate clean energy deployment, including just transition frameworks and community benefit sharing.",
+      },
+      {
+        title: "Grid Infrastructure & Transmission",
+        description:
+          "Grid infrastructure development, open access and wheeling frameworks, transmission licensing, and regulatory structures governing grid expansion, interconnection, and regional power pooling.",
+      },
+      {
+        title: "Gas-to-Power",
+        description:
+          "Legal, regulatory, and commercial frameworks governing gas-to-power projects; gas supply agreements, power plant development, and integration of gas-fired generation into national power sector transition plans as a bridge fuel.",
+      },
+      {
+        title: "Emerging Technologies",
+        description:
+          "Legal, regulatory, and commercial advisory on green hydrogen projects, power-to-x value chains, battery energy storage (BESS), offshore wind, and distributed energy resources across African markets.",
+      },
+    ],
+    image: "/assets/practice-areas/image10.jpg",
+    imageAlt: "Aerial view of a utility-scale solar farm and its substation",
   },
   {
-    title: "Climate Strategy, Finance & Carbon Markets",
+    slug: "climate-policy-finance-carbon-markets",
+    title: "Climate Policy, Finance & Carbon Markets",
     description:
       "We help governments, investors and corporates turn climate priorities into investable, low-carbon and resilient outcomes, from policy and decarbonisation pathways to carbon markets, Article 6 and climate finance.",
+    tagline: "Turning Climate Priorities into Investable, Resilient Outcomes.",
+    intro: [
+      "We help governments, investors, corporates and project developers navigate the fast-evolving climate economy, bridging national ambition and private capital, shaped by local realities and international climate standards.",
+      "Our work spans policy and decarbonization planning, investment structuring, and carbon market transactions.",
+    ],
+    coverage: [
+      {
+        title: "Climate Policy, NDCs & Strategic Frameworks",
+        description:
+          "Advising governments and institutions on translating Nationally Determined Contributions (NDCs) and long-term climate strategies into actionable policies, sector roadmaps, and investable project pipelines.",
+      },
+      {
+        title: "Carbon Market Strategy & Article 6 Advisory",
+        description:
+          "Legal, strategy, and transaction advisory for compliance and voluntary carbon markets. Guidance on Article 6 mechanisms, ITMO trading structures, national carbon registries, host-country approvals, and sovereign carbon strategies.",
+      },
+      {
+        title: "Climate Finance Structuring & Capital Mobilization",
+        description:
+          "Commercial and legal structuring for climate investments: blended finance, green and sustainability-linked bonds, debt-for-climate swaps, and DFI co-financing frameworks designed to crowd in commercial capital.",
+      },
+      {
+        title: "Adaptation, Resilience & Just Transition",
+        description:
+          "Advisory on integrating physical and transition risk assessments into asset valuation, designing resilient infrastructure frameworks, and structuring just transition plans with clear community benefit-sharing models.",
+      },
+      {
+        title: "Corporate Climate Risk & Carbon Border Adjustment (CBAM) Readiness",
+        description:
+          "Helping enterprises and corporates assess climate risk, design internal carbon pricing, and prepare for CBAM.",
+      },
+      {
+        title: "Decarbonisation & Net Zero Pathways",
+        description:
+          "Baseline emissions modelling, science-based target setting, and actionable decarbonisation pathways across energy-intensive, industrial, and extractive operations.",
+      },
+    ],
+    image: "/assets/practice-areas/image6.jpg",
+    imageAlt: "Seedlings growing from stacks of coins beside a moss globe marked CO2",
   },
   {
+    slug: "esg-sustainability-disclosure",
     title: "ESG & Sustainability Disclosure",
     description:
       "We help corporates, industrials and financial institutions build ESG frameworks and disclosures that stand up to investor, lender and regulator scrutiny, from materiality and reporting to climate risk and supply chain compliance.",
+    tagline: "Moving from ESG Commitments to Credible, Verifiable Disclosure.",
+    intro: [
+      "For African businesses seeking international capital, supply chain access, or DFI partnerships, ESG performance and disclosure are no longer differentiators. They are conditions of entry.",
+      "We help clients cut through regulatory complexity to build material, audit-ready ESG frameworks and disclosures that meet domestic mandates and international standards, delivering real value without draining resources.",
+    ],
+    coverage: [
+      {
+        title: "ESG Strategy & Framework Design",
+        description:
+          "Advisory on materiality assessments, governance structures, and strategic roadmaps aligned with GRI, SASB, ISSB, and sector-specific standards relevant to African energy, extractives, and industrial enterprises.",
+      },
+      {
+        title: "Sustainability Reporting & Compliance Readiness",
+        description:
+          "Sustainability report development, disclosure framework alignment, and assurance readiness under IFRS S1 and S2 and GRI, including the mandatory disclosure requirements reaching Nigerian and other African businesses through international partners, supply chains, and capital relationships.",
+      },
+      {
+        title: "Climate Risk & Scenario Analysis",
+        description:
+          "Physical and transition risk assessment, scenario analysis to support IFRS S2 and investor disclosures, with climate risk built into governance and reporting.",
+      },
+      {
+        title: "Supply Chain ESG & Trade Compliance",
+        description:
+          "ESG due diligence and supply chain frameworks for international trade mandates, including the EU CSRD and CSDDD, and emissions reporting for the Carbon Border Adjustment Mechanism (CBAM).",
+      },
+      {
+        title: "Executive & Board Capacity Building",
+        description:
+          "Training for boards, C-suite executives, and sustainability leads on climate governance, ESG fiduciary duties, disclosure standards, and regulatory risk across Nigeria and sub-Saharan Africa.",
+      },
+    ],
+    image: "/assets/practice-areas/image36.jpg",
+    imageAlt: "A professional reviewing sustainability data dashboards across several monitors",
   },
   {
+    slug: "critical-minerals-industrial-value-chains",
     title: "Critical Minerals & Industrial Value Chains",
     description:
       "We advise governments, investors, and businesses on critical minerals strategy, policy, and regulation; responsible resource development; investment; and the industrial value chains it can enable to strengthen local value creation.",
+    tagline: "From Resource Endowment to Industrial Value.",
+    intro: [
+      "Africa holds a significant share of the world's critical minerals. Whether they build industrial value or leave as raw material depends on governance: licensing, fiscal terms, value-addition rules and industrial policy.",
+      "We advise governments, investors and developers on mineral policy, licensing and fiscal design, investment structuring, local processing and community benefit sharing, turning resources into manufacturing capability and export competitiveness.",
+    ],
+    coverage: [
+      {
+        title: "Mineral Policy, Licensing & Institutional Reform",
+        description:
+          "Advisory on national critical mineral strategies, licensing frameworks, royalty and fiscal regime design, environmental permitting, and the regulatory reforms needed to establish investment-ready, responsibly governed mining sectors across African jurisdictions.",
+      },
+      {
+        title: "Investment Structuring & Transactions",
+        description:
+          "Mining investment structuring, joint venture agreements, offtake agreements, project finance documentation, and M&A advisory across critical minerals projects in African markets.",
+      },
+      {
+        title: "Green Industrialization & Value Addition",
+        description:
+          "Advisory on domestic processing and beneficiation requirements, green manufacturing frameworks, clean technology supply chains, industrial policy, special economic zones, and the trade instruments supporting export-competitive, low-carbon industrial growth.",
+      },
+      {
+        title: "ESG, Social License & Responsible Mining",
+        description:
+          "Advisory on ESG frameworks and human rights due diligence for mining, aligned with IRMA, ICMM and the Equator Principles, plus community development agreements, FPIC, resettlement and benefit-sharing models that build a lasting social licence to operate.",
+      },
+      {
+        title: "Trade & Export Frameworks",
+        description:
+          "Advisory on trade agreements, export regulations, and the bilateral and multilateral frameworks governing critical mineral trade, including alignment with AfCFTA, EU Critical Raw Materials Act requirements, and US Inflation Reduction Act supply chain provisions.",
+      },
+    ],
+    image: "/assets/practice-areas/Latest Critical Minerals and Industrial Value Chains.jpg",
+    imageAlt: "Crushed ore travelling along a conveyor belt at a mine",
   },
   {
+    slug: "ventures-innovation",
     title: "Ventures & Innovation",
     description:
       "We advise founders, investors, accelerators, and corporates on venture structuring, investment readiness, capital raising, market entry, and partnership frameworks, turning promising energy and climate solutions into investable, scalable businesses.",
+    tagline: "From Promising Ventures to Investable Businesses.",
+    intro: [
+      "Africa's energy and climate innovation is not short of ideas or founders. The challenge is turning promising solutions into investable, scalable businesses with the right strategy, governance, commercial model, and regulatory pathway.",
+      "We advise founders, investors, accelerators, and corporates on building investment-ready ventures and the ecosystems that enable them to scale.",
+    ],
+    coverage: [
+      {
+        title: "Venture Strategy & Legal Support",
+        description:
+          "Legal support for early-stage and growth-stage ventures: corporate structuring, founder arrangements, governance frameworks, commercial agreements, intellectual property protection, and the legal foundations that enable ventures to attract investment and scale.",
+      },
+      {
+        title: "Investment Readiness & Capital Raising",
+        description:
+          "Readiness assessment, business model and financial review, data room preparation, term sheet negotiation, and preparation for DFI, venture capital, and strategic investor diligence and capital raising.",
+      },
+      {
+        title: "Market Entry Advisory",
+        description:
+          "Market assessment, regulatory mapping, licensing and permit requirements, and entry strategy for ventures and international companies expanding across African markets.",
+      },
+      {
+        title: "Partnership & Collaboration Frameworks",
+        description:
+          "Joint venture structuring, technology licensing agreements, distribution and agency arrangements, offtake structures, and the commercial frameworks that govern partnerships between international and African market participants.",
+      },
+      {
+        title: "Ecosystem & Program Advisory",
+        description:
+          "Advisory to accelerators, incubators, innovation hubs, and development partners on program design, deal flow quality, mentorship structures, and the capital and capability infrastructure that enables African ventures to scale.",
+      },
+    ],
+    image: "/assets/practice-areas/image18.jpg",
+    imageAlt: "Hands on a laptop keyboard beneath venture capital and growth icons",
   },
+];
+
+export const practiceAreaHref = (slug: string) => `/practice-areas/${slug}`;
+
+export const getPracticeArea = (slug: string) => practiceAreas.find((area) => area.slug === slug);
+
+/** The four lenses applied across every practice area. */
+export const practiceLenses = [
+  { title: "Regulatory", description: "The rules, institutions and governance that enable markets." },
+  { title: "Policy", description: "Strategies, reforms and public-sector interventions that shape industries." },
+  { title: "Strategy", description: "Commercial, operational, and implementation pathways." },
+  { title: "Capital", description: "Financing structures, investment mobilization and bankability." },
 ];
 
 export const coreValues = [

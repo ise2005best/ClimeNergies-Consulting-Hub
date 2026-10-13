@@ -3,8 +3,10 @@ import { FaCircleCheck, FaCompassDrafting, FaMagnifyingGlass } from "react-icons
 import { Accordion } from "@/components/accordion";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { MissionVision } from "@/components/mission-vision";
-import { ButtonLink, Container, Eyebrow, StatsBadge, Prose, SectionHeading, buttonClasses } from "@/components/ui";
-import { approach, clientGroups, founderIntro, heroSlides, insights, practiceAreas, team } from "@/lib/content";
+import { GetInTouch } from "@/components/get-in-touch";
+import { LatestInsights } from "@/components/latest-insights";
+import { ButtonLink, Container, Eyebrow, StatsBadge, Prose, SectionHeading } from "@/components/ui";
+import { approach, clientGroups, founderIntro, heroSlides, practiceAreaHref, practiceAreas, team } from "@/lib/content";
 
 const approachIcons = {
   search: FaMagnifyingGlass,
@@ -122,7 +124,9 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <Accordion items={practiceAreas} />
+            <Accordion
+              items={practiceAreas.map((area) => ({ ...area, href: practiceAreaHref(area.slug) }))}
+            />
           </div>
         </Container>
       </section>
@@ -249,81 +253,9 @@ export default function HomePage() {
 
       <MissionVision />
 
-      {/* Get In Touch: extra space around it, and the Africa image is shown whole rather than cropped */}
-      <section className="pt-8 pb-24 lg:pt-16 lg:pb-32">
-        <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div>
-            <Eyebrow>Get In Touch</Eyebrow>
-            <SectionHeading lines={["Ready To Close The Gap?"]} />
-            <Prose className="mt-6 max-w-xl">
-              <p>
-                Whether you are a government shaping policy, an investor deploying capital, a business navigating
-                regulatory complexity, or a developer bringing a project to market, we have the expertise to help
-                you move from ambition to execution and from vision to lasting value.
-              </p>
-            </Prose>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <ButtonLink href="/contact">Talk To Us</ButtonLink>
-              <ButtonLink href="/practice-areas" variant="outline-dark">
-                Explore Our Practice Areas
-              </ButtonLink>
-            </div>
-          </div>
-          <Image
-            src="/assets/home-page/An Africa Led Transition.jpg"
-            alt="Rows of solar panels with the shape of Africa highlighted in green"
-            width={2121}
-            height={1413}
-            sizes="(min-width: 1024px) 700px, 100vw"
-            className="h-auto w-full"
-          />
-        </Container>
-      </section>
+      <GetInTouch withImage />
 
-      {/* Latest */}
-      <section className="pb-16">
-        <Container>
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <Eyebrow>Insights &amp; Perspective</Eyebrow>
-              <SectionHeading lines={["Latest From ClimeNergies"]} />
-            </div>
-            <ButtonLink href="/blog" size="sm">
-              View All
-            </ButtonLink>
-          </div>
-          <ul className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
-            {insights.map((post) => (
-              <li key={post.href}>
-                <article className="group flex h-full flex-col">
-                  <div className="relative aspect-4/3 overflow-hidden bg-forest-100">
-                    <Image
-                      src={post.image}
-                      alt=""
-                      fill
-                      sizes="(min-width: 768px) 400px, 100vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <span className="absolute top-4 left-4 bg-white/90 px-3 py-1 font-ui text-xs font-medium text-forest-900 backdrop-blur">
-                      ClimeNergies Digest
-                    </span>
-                  </div>
-                  <h3 className="mt-5 font-display text-lg leading-snug font-medium text-forest-900">{post.title}</h3>
-                  <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-ink/75">{post.excerpt}</p>
-                  <a
-                    href={post.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={buttonClasses({ size: "sm", className: "mt-6 self-start" })}
-                  >
-                    Read Article <span className="sr-only">: {post.title} (PDF, opens in a new tab)</span>
-                  </a>
-                </article>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
+      <LatestInsights />
     </>
   );
 }

@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useId, useState } from "react";
-import { LuMinus, LuPlus } from "react-icons/lu";
+import { LuArrowRight, LuMinus, LuPlus } from "react-icons/lu";
 
-type Item = { title: string; description: string };
+/** `href` adds a "Learn more" link under the description. */
+type Item = { title: string; description: string; href?: string };
 
 export function Accordion({ items, className = "" }: { items: Item[]; className?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -42,9 +44,20 @@ export function Accordion({ items, className = "" }: { items: Item[]; className?
               className={`grid transition-[grid-template-rows] duration-300 ease-out ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
             >
               <div className="overflow-hidden">
-                <p className="max-w-2xl pb-6 text-[0.95rem] leading-[1.75] tracking-[0.01em] text-ink/85">
-                  {item.description}
-                </p>
+                <div className="pb-6">
+                  <p className="max-w-2xl text-[0.95rem] leading-[1.75] tracking-[0.01em] text-ink/85">
+                    {item.description}
+                  </p>
+                  {item.href && (
+                    <Link
+                      href={item.href}
+                      className="mt-4 inline-flex items-center gap-1.5 font-ui text-sm font-medium text-forest-900 underline-offset-4 hover:underline"
+                    >
+                      Learn more<span className="sr-only"> about {item.title}</span>
+                      <LuArrowRight className="size-4" aria-hidden />
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           </div>

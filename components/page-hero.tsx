@@ -13,7 +13,7 @@ export function PageHero({
   image: string;
   alt: string;
   title: string[];
-  subtitle: string;
+  subtitle?: string;
   actions?: ReactNode;
   imagePosition?: string;
 }) {
@@ -33,7 +33,9 @@ export function PageHero({
               </span>
             ))}
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">{subtitle}</p>
+          {subtitle && (
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">{subtitle}</p>
+          )}
           {actions && <div className="mt-8 flex flex-wrap gap-4">{actions}</div>}
         </div>
       </Container>
