@@ -59,7 +59,8 @@ export default function HomePage() {
       {/* Who We Are */}
       <section className="pb-16">
         <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
-          <div className="relative lg:order-first">
+          {/* Below the text on mobile, on the left on desktop. */}
+          <div className="relative order-last lg:order-first">
             {/* On desktop the image fills the row, so it matches the height of the text column. */}
             <div className="relative aspect-[4/3.6] overflow-hidden lg:aspect-auto lg:h-full">
               <Image
