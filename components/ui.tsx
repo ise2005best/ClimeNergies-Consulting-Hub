@@ -41,11 +41,18 @@ export function Eyebrow({ children, tone = "dark" }: { children: ReactNode; tone
     <p
       className={`flex items-center gap-2.5 font-asap text-lg font-medium ${tone === "light" ? "text-white/90" : "text-forest-900"}`}
     >
-      <svg viewBox="0 0 18 8" className="h-2 w-4.5 text-citron-500" aria-hidden="true">
-        <path d="M0 1.5h7l2.5 5H18" fill="none" stroke="currentColor" strokeWidth="1.75" />
-      </svg>
+      <StepMark className="h-2 w-4.5 text-citron-500" />
       {children}
     </p>
+  );
+}
+
+/** The brand's stepped line, used before section labels and the active mobile menu link. */
+export function StepMark({ className = "", strokeWidth = 1.75 }: { className?: string; strokeWidth?: number }) {
+  return (
+    <svg viewBox="0 0 18 8" className={className} aria-hidden="true">
+      <path d="M0 1.5h7l2.5 5H18" fill="none" stroke="currentColor" strokeWidth={strokeWidth} />
+    </svg>
   );
 }
 

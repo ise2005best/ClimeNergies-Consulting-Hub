@@ -5,6 +5,12 @@ export const navLinks = [
   { href: "/blog", label: "Blog" },
 ] as const;
 
+// These pages don't exist yet; the links will 404 until they're added.
+export const legalLinks = [
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/privacy", label: "Privacy Policy" },
+];
+
 export const contactDetails = {
   email: "info@climenergiesconsulting.com",
   phone: "+234 (0) 808 585 5527",

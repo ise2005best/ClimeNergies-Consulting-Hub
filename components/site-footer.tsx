@@ -1,18 +1,12 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
-import { contactDetails, navLinks } from "@/lib/content";
+import { contactDetails, legalLinks, navLinks } from "@/lib/content";
 import { Logo } from "./logo";
 import { NewsletterForm } from "./newsletter-form";
 import { Container } from "./ui";
 
 const footerNav = [...navLinks, { href: "/contact", label: "Contact" }];
-
-// These pages don't exist yet; the links will 404 until they're added.
-const legalLinks = [
-  { href: "/terms", label: "Terms of Service" },
-  { href: "/privacy", label: "Privacy Policy" },
-];
 
 const linkClass = "transition-colors hover:text-citron-400";
 
