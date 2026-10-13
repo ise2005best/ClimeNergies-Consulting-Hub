@@ -15,7 +15,11 @@ export const contactDetails = {
   email: "info@climenergiesconsulting.com",
   phone: "+234 (0) 808 585 5527",
   phoneHref: "tel:+2348085855527",
-  address: ["2nd Floor, Alternative Bank building", "21, Admiralty Way", "Lekki Phase 1, Lagos, Nigeria."],
+  address: [
+    "2nd Floor, Alternative Bank building",
+    "21, Admiralty Way",
+    "Lekki Phase 1, Lagos, Nigeria.",
+  ],
 };
 
 export const heroSlides = [
@@ -23,18 +27,20 @@ export const heroSlides = [
     image: "/assets/carousel/Latest Heroslide 1 -.jpg",
     alt: "Two engineers in hard hats reviewing plans at a large solar installation",
     headline: ["From Policy to Projects.", "From Vision to Value."],
-    subheadline: "Integrated advisory across Africa's energy, climate, and industrial transformation.",
-    position: "object-center",
-  },
-  {
-    image: "/assets/carousel/Latest Heroslide 3.jpg",
-    alt: "A team in green shirts discussing a wind turbine model around a table",
-    headline: ["Advisory Built for Africa.", "Grounded in Execution."],
-    subheadline: "From ambition to delivery across Africa's energy, climate and industrial economy.",
+    subheadline:
+      "Integrated advisory across Africa's energy, climate, and industrial transformation.",
     position: "object-center",
   },
   {
     image: "/assets/carousel/Connecting Capital Ecosystems Innovation (1).png",
+    alt: "A team in green shirts discussing a wind turbine model around a table",
+    headline: ["Advisory Built for Africa.", "Grounded in Execution."],
+    subheadline:
+      "From ambition to delivery across Africa's energy, climate and industrial economy.",
+    position: "object-center",
+  },
+  {
+    image: "/assets/carousel/Latest Heroslide 3.jpg",
     alt: "A glowing green globe centred on the African continent, connected by a network of points",
     headline: ["Connecting Capital", "Innovation and Ecosystems."],
     subheadline:
@@ -89,8 +95,10 @@ export const practiceAreas: PracticeArea[] = [
           "Petroleum sector governance, fiscal regime design, regulatory reform, market entry, local content, anti-corruption, environmental, social and governance requirements, and engagement with governments and regulators across African markets.",
       },
     ],
-    image: "/assets/practice-areas/Latest Oil Gas Energy Transition Practice Area .jpg",
-    imageAlt: "Pressurised storage tanks and pipework at a gas processing plant",
+    image:
+      "/assets/practice-areas/Latest Oil Gas Energy Transition Practice Area .jpg",
+    imageAlt:
+      "Pressurised storage tanks and pipework at a gas processing plant",
   },
   {
     slug: "power-energy-access",
@@ -184,7 +192,8 @@ export const practiceAreas: PracticeArea[] = [
           "Advisory on integrating physical and transition risk assessments into asset valuation, designing resilient infrastructure frameworks, and structuring just transition plans with clear community benefit-sharing models.",
       },
       {
-        title: "Corporate Climate Risk & Carbon Border Adjustment (CBAM) Readiness",
+        title:
+          "Corporate Climate Risk & Carbon Border Adjustment (CBAM) Readiness",
         description:
           "Helping enterprises and corporates assess climate risk, design internal carbon pricing, and prepare for CBAM.",
       },
@@ -195,7 +204,8 @@ export const practiceAreas: PracticeArea[] = [
       },
     ],
     image: "/assets/practice-areas/image6.jpg",
-    imageAlt: "Seedlings growing from stacks of coins beside a moss globe marked CO2",
+    imageAlt:
+      "Seedlings growing from stacks of coins beside a moss globe marked CO2",
   },
   {
     slug: "esg-sustainability-disclosure",
@@ -235,7 +245,8 @@ export const practiceAreas: PracticeArea[] = [
       },
     ],
     image: "/assets/practice-areas/image36.jpg",
-    imageAlt: "A professional reviewing sustainability data dashboards across several monitors",
+    imageAlt:
+      "A professional reviewing sustainability data dashboards across several monitors",
   },
   {
     slug: "critical-minerals-industrial-value-chains",
@@ -274,7 +285,8 @@ export const practiceAreas: PracticeArea[] = [
           "Advisory on trade agreements, export regulations, and the bilateral and multilateral frameworks governing critical mineral trade, including alignment with AfCFTA, EU Critical Raw Materials Act requirements, and US Inflation Reduction Act supply chain provisions.",
       },
     ],
-    image: "/assets/practice-areas/Latest Critical Minerals and Industrial Value Chains.jpg",
+    image:
+      "/assets/practice-areas/Latest Critical Minerals and Industrial Value Chains.jpg",
     imageAlt: "Crushed ore travelling along a conveyor belt at a mine",
   },
   {
@@ -315,20 +327,36 @@ export const practiceAreas: PracticeArea[] = [
       },
     ],
     image: "/assets/practice-areas/image18.jpg",
-    imageAlt: "Hands on a laptop keyboard beneath venture capital and growth icons",
+    imageAlt:
+      "Hands on a laptop keyboard beneath venture capital and growth icons",
   },
 ];
 
 export const practiceAreaHref = (slug: string) => `/practice-areas/${slug}`;
 
-export const getPracticeArea = (slug: string) => practiceAreas.find((area) => area.slug === slug);
+export const getPracticeArea = (slug: string) =>
+  practiceAreas.find((area) => area.slug === slug);
 
 /** The four lenses applied across every practice area. */
 export const practiceLenses = [
-  { title: "Regulatory", description: "The rules, institutions and governance that enable markets." },
-  { title: "Policy", description: "Strategies, reforms and public-sector interventions that shape industries." },
-  { title: "Strategy", description: "Commercial, operational, and implementation pathways." },
-  { title: "Capital", description: "Financing structures, investment mobilization and bankability." },
+  {
+    title: "Regulatory",
+    description: "The rules, institutions and governance that enable markets.",
+  },
+  {
+    title: "Policy",
+    description:
+      "Strategies, reforms and public-sector interventions that shape industries.",
+  },
+  {
+    title: "Strategy",
+    description: "Commercial, operational, and implementation pathways.",
+  },
+  {
+    title: "Capital",
+    description:
+      "Financing structures, investment mobilization and bankability.",
+  },
 ];
 
 export const coreValues = [
@@ -354,7 +382,8 @@ export const coreValues = [
   },
   {
     title: "Knowledge & Capacity Building",
-    description: "We build local expertise and capability for Africa's energy, climate and industrial future.",
+    description:
+      "We build local expertise and capability for Africa's energy, climate and industrial future.",
   },
 ];
 
@@ -489,7 +518,8 @@ export const digests = [
     issue: "Issue No. 5",
     date: "August 2026",
     // DRAFT TITLE AND EXCERPT: drawn from the issue's top stories; needs client sign-off.
-    title: "August 2026: Dangote Files for a $5bn IPO as the DRC Bans Copper and Cobalt Concentrate Exports",
+    title:
+      "August 2026: Dangote Files for a $5bn IPO as the DRC Bans Copper and Cobalt Concentrate Exports",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. Dangote files for what would be the largest listing in African market history, Kinshasa forces value retention onshore, and Brent touches $95 as the Strait of Hormuz stays shut.",
     cover: "/assets/blog/covers/digest-2026-08.jpg",
@@ -499,7 +529,8 @@ export const digests = [
     issue: "Issue No. 4",
     date: "July 2026",
     // DRAFT TITLE AND EXCERPT: drawn from the issue's lead stories; needs client sign-off.
-    title: "July 2026: Nigeria Puts 50 Oil Blocks Up for Bidding as Lagos Opens a Greenhouse Gas Registry",
+    title:
+      "July 2026: Nigeria Puts 50 Oil Blocks Up for Bidding as Lagos Opens a Greenhouse Gas Registry",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. The licensing round finally reaches commercial bidding, Nigeria opens West Africa's largest lithium plant, and cobalt jumps around 130% on DRC export restrictions.",
     cover: "/assets/blog/covers/digest-2026-07.jpg",
@@ -509,7 +540,8 @@ export const digests = [
     issue: "Issue No. 3",
     date: "June 2026",
     // DRAFT TITLE: the design repeated May's headline here; this one is drawn from the June issue's lead stories.
-    title: "June 2026: Washington and Tehran Agree to Reopen Hormuz as Dangote Tops 700,000 bpd",
+    title:
+      "June 2026: Washington and Tehran Agree to Reopen Hormuz as Dangote Tops 700,000 bpd",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. Washington and Tehran agree to reopen the Strait of Hormuz under a 60-day ceasefire, Dangote tops 700,000 bpd, and Nigeria's DisCos earn N597.55bn in Q1 despite persistent blackouts.",
     cover: "/assets/blog/covers/digest-2026-06.jpg",
@@ -518,7 +550,8 @@ export const digests = [
   {
     issue: "Issue No. 2",
     date: "May 2026",
-    title: "May 2026: Nigeria's Downstream War Goes to Court as Africa Bets on Financing Itself",
+    title:
+      "May 2026: Nigeria's Downstream War Goes to Court as Africa Bets on Financing Itself",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. Dangote moves to end fuel imports, fifteen states take over regulation of their power markets, and a new Gas Master Plan redraws the map.",
     cover: "/assets/blog/covers/digest-2026-05.jpg",
@@ -527,7 +560,8 @@ export const digests = [
   {
     issue: "Issue No. 1",
     date: "April 2026",
-    title: "April 2026: Nigeria Turns Net Exporter as the Hormuz Shock Redraws Global Energy",
+    title:
+      "April 2026: Nigeria Turns Net Exporter as the Hormuz Shock Redraws Global Energy",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. From the Dangote export milestone to the UAE's exit from OPEC and OPEC+ after six decades, Nigeria's energy landscape pivots in real time.",
     cover: "/assets/blog/covers/digest-2026-04.jpg",
@@ -542,4 +576,8 @@ const digestFor = (date: string) => {
 };
 
 /** The three cards in the "Insights & Perspective" section. They show the same covers as the blog page. */
-export const insights = [digestFor("June 2026"), digestFor("July 2026"), digestFor("August 2026")];
+export const insights = [
+  digestFor("June 2026"),
+  digestFor("July 2026"),
+  digestFor("August 2026"),
+];
