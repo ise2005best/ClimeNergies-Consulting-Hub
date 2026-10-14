@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FaLinkedin } from "react-icons/fa6";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { ButtonLink, Container, Eyebrow, SectionHeading } from "@/components/ui";
@@ -64,6 +65,20 @@ export default function ContactPage() {
                       </span>
                     ))}
                   </address>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-forest-600">LinkedIn</dt>
+                <dd className="mt-0.5">
+                  <a
+                    href={contactDetails.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-forest-900 underline-offset-4 hover:underline"
+                  >
+                    ClimeNergies Consulting Hub
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
                 </dd>
               </div>
             </dl>

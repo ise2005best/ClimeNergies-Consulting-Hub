@@ -21,7 +21,7 @@ export default function AboutPage() {
         image="/assets/about-page/Heropage Slide 3_shutterstock_533448412 (2).jpg"
         alt="A light bulb reflecting wind turbines in front of a solar farm and green hills"
         title={["About", "ClimeNergies"]}
-        subtitle="An advisory firm built for the complexity of the energy transition."
+        subtitle="Advisory Built for Africa's Sustainable Future"
         actions={
           <>
             <ButtonLink href="/contact">Get In Touch</ButtonLink>
@@ -37,11 +37,11 @@ export default function AboutPage() {
         <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
             <Eyebrow>Who We Are</Eyebrow>
-            <SectionHeading lines={["Advisory Built For", "Africa's Sustainable Future"]} />
+            <SectionHeading lines={["Grounded in African Market Realities.", "Focused on execution."]} />
             <Prose className="mt-8">
               <p>
                 ClimeNergies Consulting Hub is an Africa-focused boutique advisory firm working across the
-                continent&apos;s energy, climate, and industrial transformation.
+                continent&apos;s energy, climate, critical minerals and industrial transformation.
               </p>
               <p>
                 Based in Nigeria with a continent-wide mandate, we advise governments, corporations, investors,
@@ -122,7 +122,7 @@ export default function AboutPage() {
       <section className="pb-16">
         <Container>
           <Eyebrow>Why ClimeNergies</Eyebrow>
-          <SectionHeading lines={["Built For The Realities", "Our Clients Navigate."]} />
+          <SectionHeading lines={["Built For The Terrain", "Our Clients Navigate."]} />
           <Prose className="mt-8 max-w-5xl">
             <p>
               Africa needs advisory grounded in its own markets, institutions, and realities, not global playbooks
@@ -157,7 +157,7 @@ export default function AboutPage() {
             <SectionHeading lines={["The Principles Behind", "Every Engagement"]} />
             <Prose className="mt-6 max-w-md">
               <p>
-                Five principles that govern every engagement, every recommendation, and every relationship we
+                Five principles govern every engagement, every recommendation, and every relationship we
                 build. These are not statements on a wall; they are the operating principles behind every piece of
                 advice we give and every engagement we undertake.
               </p>
@@ -173,7 +173,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <Eyebrow>The Team</Eyebrow>
-              <SectionHeading lines={["Led By Expertise,", "Backed By A Powerful Network."]} />
+              <SectionHeading lines={["Led By Expertise.", "Backed By A Powerful Network."]} />
             </div>
             <ButtonLink href="/team" size="sm">
               Learn More

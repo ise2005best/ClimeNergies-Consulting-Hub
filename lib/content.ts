@@ -1,6 +1,6 @@
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About", match: ["/about", "/team"] },
+  { href: "/about", label: "About Us", match: ["/about", "/team"] },
   { href: "/practice-areas", label: "Practice Areas" },
   { href: "/blog", label: "Blog" },
 ] as const;
@@ -20,6 +20,7 @@ export const contactDetails = {
     "21, Admiralty Way",
     "Lekki Phase 1, Lagos, Nigeria.",
   ],
+  linkedin: "https://www.linkedin.com/company/climenergies-consulting-hub/",
 };
 
 export const heroSlides = [
@@ -42,7 +43,7 @@ export const heroSlides = [
   {
     image: "/assets/carousel/Latest Heroslide 3.jpg",
     alt: "A glowing green globe centred on the African continent, connected by a network of points",
-    headline: ["Connecting Capital", "Innovation and Ecosystems."],
+    headline: ["Connecting Capital,", "Innovation and Ecosystems."],
     subheadline:
       "Turning promising energy, climate and resource solutions into investable, scalable businesses.",
     position: "object-center",
@@ -366,7 +367,7 @@ export const coreValues = [
       "Every recommendation we make is a commitment to the future. We design solutions that are environmentally responsible, resource-efficient, and built for long-term resilience.",
   },
   {
-    title: "Integrity & Professional Excellence",
+    title: "Integrity & Excellence",
     description:
       "We uphold the highest ethical standards, transparency, and rigor, delivering insights that our clients can trust without reservation.",
   },
@@ -376,7 +377,7 @@ export const coreValues = [
       "We build the best solutions with clients, not for them. We work hand in hand with clients and partners to co-create strategies that reflect local realities, align stakeholder interests, and drive measurable, sustainable outcomes.",
   },
   {
-    title: "African Context, Global Alignment",
+    title: "African Context, Global Standards",
     description:
       "We ground solutions in local market realities while aligning with global standards and markets.",
   },

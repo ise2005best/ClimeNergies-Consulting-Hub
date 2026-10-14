@@ -40,7 +40,7 @@ export function LatestInsights() {
                   rel="noopener noreferrer"
                   className={buttonClasses({ size: "sm", className: "mt-6 self-start" })}
                 >
-                  Read Article <span className="sr-only">: {post.title} (PDF, opens in a new tab)</span>
+                  Read Digest <span className="sr-only">: {post.title} (PDF, opens in a new tab)</span>
                 </a>
               </article>
             </li>

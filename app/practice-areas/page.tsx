@@ -15,9 +15,9 @@ export default function PracticeAreasPage() {
   return (
     <>
       <PageHero
-        image="/assets/carousel/Connecting Capital Ecosystems Innovation (1).png"
+        image="/assets/practice-areas/Market Eco-System Development (2).jpg"
         alt="A glowing green globe centred on the African continent, connected by a network of points"
-        title={["Six Practice Areas"]}
+        title={["Connected Expertise."]}
         subtitle="Six specialist practices. Four threads. One integrated approach."
         actions={
           <>

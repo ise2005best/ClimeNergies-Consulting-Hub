@@ -89,7 +89,7 @@ export function Prose({ children, className = "" }: { children: ReactNode; class
 
 const stats = [
   { value: "25+", label: "Years of sector experience" },
-  { value: "6", label: "Integrated focus areas" },
+  { value: "6", label: "Practice Areas" },
 ];
 
 export function StatsBadge({ className = "" }: { className?: string }) {

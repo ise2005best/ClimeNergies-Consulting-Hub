@@ -17,7 +17,7 @@ export default function BlogPage() {
         image="/assets/blog/iStock-1201144154.jpg"
         alt="Colleagues in discussion around a tablet and printed charts"
         title={["Our Blog"]}
-        subtitle="Analysis and perspectives on the transition from the ground up."
+        subtitle="Local insights and global perspective on energy, climate, critical minerals and industrial transition."
       />
 
       <section className="py-16">
@@ -63,7 +63,7 @@ export default function BlogPage() {
                     rel="noopener noreferrer"
                     className={buttonClasses({ size: "sm", className: "mt-6 self-start" })}
                   >
-                    Read Article <span className="sr-only">: {digest.title} (PDF, opens in a new tab)</span>
+                    Read Digest <span className="sr-only">: {digest.title} (PDF, opens in a new tab)</span>
                   </a>
                 </article>
               </li>
