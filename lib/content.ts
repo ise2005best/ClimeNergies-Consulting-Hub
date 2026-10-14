@@ -516,6 +516,16 @@ export const founderIntro = [
 /** Every issue of The ClimeNergies Digest, newest first. Covers are the first page of each PDF. */
 export const digests = [
   {
+    issue: "Issue No. 6",
+    date: "September 2026",
+    // DRAFT TITLE AND EXCERPT: drawn from the issue's top stories; needs client sign-off.
+    title: "September 2026: Nigeria Wins the Mambilla Arbitration as Dangote Breaks Ground in Kenya",
+    excerpt:
+      "The ClimeNergies Digest Monthly News Roundup. Nigeria sees off Sunrise's $400m claim over the 3,050MW Mambilla hydropower project, Dangote breaks ground on a $16bn East African refinery in Kenya, and Brent tops $113 as the IEA warns the oil supply shock is deepening.",
+    cover: "/assets/blog/covers/digest-2026-09.jpg",
+    href: "/assets/blog/ClimeNergies Digest Sept 2026.pdf",
+  },
+  {
     issue: "Issue No. 5",
     date: "August 2026",
     // DRAFT TITLE AND EXCERPT: drawn from the issue's top stories; needs client sign-off.
@@ -578,7 +588,7 @@ const digestFor = (date: string) => {
 
 /** The three cards in the "Insights & Perspective" section. They show the same covers as the blog page. */
 export const insights = [
-  digestFor("June 2026"),
   digestFor("July 2026"),
   digestFor("August 2026"),
+  digestFor("September 2026"),
 ];
