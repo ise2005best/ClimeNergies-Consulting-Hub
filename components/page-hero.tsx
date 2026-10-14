@@ -26,7 +26,7 @@ export function PageHero({
       />
       <Container className="pt-32 pb-14 sm:pb-20">
         <div className="max-w-4xl motion-safe:animate-[rise-in_0.9s_cubic-bezier(0.2,0.7,0.2,1)_both]">
-          <h1 className="font-display text-[clamp(3rem,8vw,6.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-white">
+          <h1 className="font-asap text-[clamp(3rem,8vw,6.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-white">
             {title.map((line) => (
               <span key={line} className="block">
                 {line}
