@@ -549,7 +549,7 @@ export const digests = [
     issue: "Issue No. 6",
     date: "September 2026",
     // DRAFT TITLE AND EXCERPT: drawn from the issue's top stories; needs client sign-off.
-    title: "September 2026: Nigeria Wins the Mambilla Arbitration as Dangote Breaks Ground in Kenya",
+    title: "September 2026: Nigeria Wins the Mambilla Arbitration as Dangote Breaks Ground in Kenya.",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. Nigeria sees off Sunrise's $400m claim over the 3,050MW Mambilla hydropower project, Dangote breaks ground on a $16bn East African refinery in Kenya, and Brent tops $113 as the IEA warns the oil supply shock is deepening.",
     cover: "/assets/blog/covers/digest-2026-09.jpg",
@@ -560,7 +560,7 @@ export const digests = [
     date: "August 2026",
     // DRAFT TITLE AND EXCERPT: drawn from the issue's top stories; needs client sign-off.
     title:
-      "August 2026: Dangote Files for a $5bn IPO as the DRC Bans Copper and Cobalt Concentrate Exports",
+      "August 2026: Dangote Files for a $5bn IPO as the DRC Bans Copper and Cobalt Concentrate Exports.",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. Dangote files for what would be the largest listing in African market history, Kinshasa forces value retention onshore, and Brent touches $95 as the Strait of Hormuz stays shut.",
     cover: "/assets/blog/covers/digest-2026-08.jpg",
@@ -571,7 +571,7 @@ export const digests = [
     date: "July 2026",
     // DRAFT TITLE AND EXCERPT: drawn from the issue's lead stories; needs client sign-off.
     title:
-      "July 2026: Nigeria Puts 50 Oil Blocks Up for Bidding as Lagos Opens a Greenhouse Gas Registry",
+      "July 2026: Nigeria Puts 50 Oil Blocks Up for Bidding as Lagos Opens a Greenhouse Gas Registry.",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. The licensing round finally reaches commercial bidding, Nigeria opens West Africa's largest lithium plant, and cobalt jumps around 130% on DRC export restrictions.",
     cover: "/assets/blog/covers/digest-2026-07.jpg",
@@ -582,7 +582,7 @@ export const digests = [
     date: "June 2026",
     // DRAFT TITLE: the design repeated May's headline here; this one is drawn from the June issue's lead stories.
     title:
-      "June 2026: Washington and Tehran Agree to Reopen Hormuz as Dangote Tops 700,000 bpd",
+      "June 2026: Washington and Tehran Agree to Reopen Hormuz as Dangote Tops 700,000 bpd.",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. Washington and Tehran agree to reopen the Strait of Hormuz under a 60-day ceasefire, Dangote tops 700,000 bpd, and Nigeria's DisCos earn N597.55bn in Q1 despite persistent blackouts.",
     cover: "/assets/blog/covers/digest-2026-06.jpg",
@@ -592,7 +592,7 @@ export const digests = [
     issue: "Issue No. 2",
     date: "May 2026",
     title:
-      "May 2026: Nigeria's Downstream War Goes to Court as Africa Bets on Financing Itself",
+      "May 2026: Nigeria's Downstream War Goes to Court as Africa Bets on Financing Itself.",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. Dangote moves to end fuel imports, fifteen states take over regulation of their power markets, and a new Gas Master Plan redraws the map.",
     cover: "/assets/blog/covers/digest-2026-05.jpg",
@@ -602,7 +602,7 @@ export const digests = [
     issue: "Issue No. 1",
     date: "April 2026",
     title:
-      "April 2026: Nigeria Turns Net Exporter as the Hormuz Shock Redraws Global Energy",
+      "April 2026: Nigeria Turns Net Exporter as the Hormuz Shock Redraws Global Energy.",
     excerpt:
       "The ClimeNergies Digest Monthly News Roundup. From the Dangote export milestone to the UAE's exit from OPEC and OPEC+ after six decades, Nigeria's energy landscape pivots in real time.",
     cover: "/assets/blog/covers/digest-2026-04.jpg",
