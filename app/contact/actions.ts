@@ -1,6 +1,16 @@
 "use server";
 
 import { z } from "zod";
+import { ContactEnquiryEmail } from "@/emails/contact-enquiry";
+import { contactDetails } from "@/lib/content";
+import { getResend } from "@/lib/resend";
+
+// No mailbox is needed for this address: replies go to the person who sent the enquiry.
+const from = "ClimeNergies Website <website@climenergiesconsulting.com>";
+
+const lagos = { timeZone: "Africa/Lagos" } as const;
+const formatDate = new Intl.DateTimeFormat("en-GB", { ...lagos, day: "numeric", month: "long", year: "numeric" });
+const formatTime = new Intl.DateTimeFormat("en-GB", { ...lagos, hour: "numeric", minute: "2-digit", hour12: true });
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "Please enter your first name.").max(100, "That name looks too long."),
@@ -47,9 +57,48 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
     return { status: "error", message: "Please check the highlighted fields.", errors, values: raw };
   }
 
-  // TODO: deliver the enquiry (e.g. email via Resend or Postmark, or a CRM webhook).
-  // Until that is wired up, submissions are only written to the server log.
-  console.info("[contact] New enquiry", result.data);
+  const { firstName, surname, email, company, message } = result.data;
+  const name = `${firstName} ${surname}`;
+  const now = new Date();
+  const receivedAt = `${formatDate.format(now)} at ${formatTime.format(now)} (Lagos time)`;
+  const failed: ContactState = {
+    status: "error",
+    message: `Sorry, we couldn't send your message. Please try again, or email us at ${contactDetails.email}.`,
+    values: raw,
+  };
+
+  const resend = getResend();
+  if (!resend) {
+    console.error("[contact] RESEND_API_KEY is not set, so the enquiry could not be sent.");
+    return failed;
+  }
+
+  const { error } = await resend.emails.send({
+    from,
+    to: contactDetails.email,
+    replyTo: email,
+    // Names are single-line form fields, but a crafted request could still contain line breaks.
+    subject: `New enquiry: ${name}${company ? ` (${company})` : ""}`.replace(/\s+/g, " "),
+    react: ContactEnquiryEmail({ firstName, surname, email, company, message, receivedAt }),
+    // The plain-text copy, for email clients that don't show HTML.
+    text: [
+      "New enquiry from the website contact form.",
+      "",
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Company: ${company || "Not given"}`,
+      "",
+      "Message:",
+      message,
+      "",
+      `Reply to this email to answer ${firstName} directly.`,
+    ].join("\n"),
+  });
+
+  if (error) {
+    console.error("[contact] Resend could not send the enquiry:", error.name, error.message);
+    return failed;
+  }
 
   return { status: "success", message: "Thank you. Your message has been received and we'll be in touch shortly." };
 }
