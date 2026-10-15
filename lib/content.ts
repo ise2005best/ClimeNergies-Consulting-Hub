@@ -188,7 +188,7 @@ export const practiceAreas: PracticeArea[] = [
           "Legal, regulatory, and commercial advisory on green hydrogen projects, power-to-x value chains, battery energy storage (BESS), offshore wind, and distributed energy resources across African markets.",
       },
     ],
-    image: "/assets/practice-areas/image10.jpg",
+    image: "/assets/practice-areas/Dreamstime Image 76921620.jpg",
     imageAlt: "Aerial view of a utility-scale solar farm and its substation",
   },
   {
@@ -317,7 +317,7 @@ export const practiceAreas: PracticeArea[] = [
       },
     ],
     image:
-      "/assets/practice-areas/Latest Critical Minerals and Industrial Value Chains.jpg",
+      "/assets/practice-areas/Dreamstime Image 478132337.jpg",
     imageAlt: "Crushed ore travelling along a conveyor belt at a mine",
   },
   {

@@ -90,7 +90,7 @@ export function LegalContactDetails() {
         </dd>
       </div>
       <div className="sm:flex sm:gap-6">
-        <dt className="text-forest-600 sm:w-20 sm:shrink-0">Post</dt>
+        <dt className="text-forest-600 sm:w-20 sm:shrink-0">Address</dt>
         <dd>
           <address className="not-italic">
             {contactDetails.address.map((line) => (

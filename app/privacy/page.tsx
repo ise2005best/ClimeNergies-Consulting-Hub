@@ -59,8 +59,8 @@ const sections: LegalSection[] = [
         <ul>
           <li>
             <strong>Contact form:</strong> your first name, surname, email address, company (if you provide it) and
-            the content of your message. We store your enquiry in our database, hosted by Supabase, and forward it
-            to our team by email through Resend.
+            the content of your message. Your enquiry is sent to our team by email through our email provider,
+            Resend.
           </li>
           <li>
             <strong>Newsletter sign-up:</strong> your email address.
@@ -107,7 +107,7 @@ const sections: LegalSection[] = [
   },
   {
     id: "how-we-use",
-    title: "How We Use Your Data and Our Lawful Bases",
+    title: "How We Use Your Data and Our Lawful Basis",
     body: (
       <>
         <p>
@@ -168,8 +168,8 @@ const sections: LegalSection[] = [
     title: "The ClimeNergies Digest",
     body: (
       <p>
-        If you subscribe to The ClimeNergies Digest, we store your email address in our mailing list database,
-        hosted by Supabase, and use it to send you each issue through our email provider, Resend. Every email
+        If you subscribe to The ClimeNergies Digest, we add your email address to our mailing list, which is kept
+        by our email provider, Resend, and use it to send you each issue. Every email
         includes a link to unsubscribe, and you can also unsubscribe at any time by emailing us at <EmailLink />.
         After you unsubscribe, we keep your email address on a suppression list only to make sure we do not email
         you again.
@@ -211,8 +211,8 @@ const sections: LegalSection[] = [
         <ul>
           <li>
             <strong>Service providers</strong> who host our website and provide our analytics (Vercel), send email
-            from our website and to newsletter subscribers (Resend), store enquiries and our mailing list in a
-            secure database (Supabase), and provide our business email, IT and administrative support. They act
+            from our website and keep our mailing list (Resend), and provide our business email, IT and
+            administrative support. They act
             only on our instructions and are bound by contracts that require them to keep your data secure and
             confidential.
           </li>
@@ -246,7 +246,7 @@ const sections: LegalSection[] = [
       <>
         <p>
           Some of our service providers store or process data outside Nigeria. Vercel (website hosting and
-          analytics), Resend (email delivery) and Supabase (database storage) are based in the United States and
+          analytics) and Resend (email delivery and our mailing list) are based in the United States and
           may process data there and in other countries. When we
           transfer personal data outside Nigeria, we make sure the transfer is permitted under the NDPA. This means
           the destination country provides an adequate level of protection, appropriate safeguards recognised under
