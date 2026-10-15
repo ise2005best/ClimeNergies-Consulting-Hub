@@ -1,12 +1,24 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { FaCircleCheck, FaCompassDrafting, FaMagnifyingGlass } from "react-icons/fa6";
 import { Accordion } from "@/components/accordion";
 import { HeroCarousel } from "@/components/hero-carousel";
+import { JsonLd } from "@/components/json-ld";
 import { MissionVision } from "@/components/mission-vision";
 import { GetInTouch } from "@/components/get-in-touch";
 import { LatestInsights } from "@/components/latest-insights";
 import { ButtonLink, Container, Eyebrow, StatsBadge, Prose, SectionHeading } from "@/components/ui";
 import { approach, clientGroups, founderFullName, founderIntro, heroSlides, practiceAreaHref, practiceAreas, team } from "@/lib/content";
+import { organizationJsonLd, pageMetadata, siteName, websiteJsonLd } from "@/lib/seo";
+
+// The first carousel slide is the one visitors see on arrival.
+const hero = heroSlides[0];
+
+export const metadata: Metadata = pageMetadata({
+  title: { absolute: `${siteName} | ${hero.headline.join(" ")}` },
+  description: hero.subheadline,
+  path: "/",
+});
 
 const approachIcons = {
   search: FaMagnifyingGlass,
@@ -19,6 +31,7 @@ const founder = team[0];
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={{ "@graph": [organizationJsonLd, websiteJsonLd] }} />
       <HeroCarousel slides={heroSlides} />
 
       {/* The Problem */}

@@ -1,24 +1,41 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
 import { LatestInsights } from "@/components/latest-insights";
 import { PageHero } from "@/components/page-hero";
 import { PracticeAreaCard } from "@/components/practice-area-card";
 import { ButtonLink, Container, Prose, SectionHeading } from "@/components/ui";
-import { practiceAreas, practiceLenses } from "@/lib/content";
+import { pageHeroes, practiceAreaHref, practiceAreas, practiceLenses } from "@/lib/content";
+import { absoluteUrl, heroTitle, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Practice Areas",
-  description:
-    "Six practice areas at the forefront of Africa's energy, resource, industrial, and climate future, each approached through regulatory, policy, strategy, and capital lenses.",
-};
+const hero = pageHeroes.practiceAreas;
+
+export const metadata: Metadata = pageMetadata({
+  title: heroTitle(hero.title),
+  description: hero.subtitle,
+  path: "/practice-areas",
+  keywords: ["practice areas", ...practiceAreas.map((area) => area.title)],
+});
 
 export default function PracticeAreasPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@type": "ItemList",
+          name: "Practice Areas",
+          itemListElement: practiceAreas.map((area, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: area.title,
+            url: absoluteUrl(practiceAreaHref(area.slug)),
+          })),
+        }}
+      />
       <PageHero
-        image="/assets/practice-areas/Market Eco-System Development (2).jpg"
-        alt="A glowing green globe centred on the African continent, connected by a network of points"
-        title={["Connected Expertise."]}
-        subtitle="Six specialist practices. Four threads. One integrated approach."
+        image={hero.image}
+        alt={hero.alt}
+        title={hero.title}
+        subtitle={hero.subtitle}
         actions={
           <>
             <ButtonLink href="/contact">Get In Touch</ButtonLink>

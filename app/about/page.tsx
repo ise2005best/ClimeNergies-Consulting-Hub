@@ -2,26 +2,40 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Accordion } from "@/components/accordion";
+import { JsonLd } from "@/components/json-ld";
 import { LinkedInLink } from "@/components/linkedin-link";
 import { MissionVision } from "@/components/mission-vision";
 import { PageHero } from "@/components/page-hero";
 import { ButtonLink, Container, Eyebrow, StatsBadge, Prose, SectionHeading } from "@/components/ui";
-import { coreValues, team } from "@/lib/content";
+import { coreValues, pageHeroes, team } from "@/lib/content";
+import { absoluteUrl, heroTitle, organizationRef, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "ClimeNergies Consulting Hub is an Africa-focused boutique advisory firm integrating policy, regulation, strategy, and capital across the continent's energy, climate, and industrial transformation.",
-};
+const hero = pageHeroes.about;
+
+export const metadata: Metadata = pageMetadata({
+  title: heroTitle(hero.title),
+  description: hero.subtitle,
+  path: "/about",
+  keywords: ["about ClimeNergies", "Africa-focused advisory firm", "boutique consulting firm Nigeria"],
+});
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@type": "AboutPage",
+          url: absoluteUrl("/about"),
+          name: heroTitle(hero.title),
+          description: hero.subtitle,
+          about: organizationRef,
+        }}
+      />
       <PageHero
-        image="/assets/about-page/Heropage Slide 3_shutterstock_533448412 (2).jpg"
-        alt="A light bulb reflecting wind turbines in front of a solar farm and green hills"
-        title={["About", "ClimeNergies."]}
-        subtitle="Advisory Built for Africa's Sustainable Future."
+        image={hero.image}
+        alt={hero.alt}
+        title={hero.title}
+        subtitle={hero.subtitle}
         actions={
           <>
             <ButtonLink href="/contact">Get In Touch</ButtonLink>

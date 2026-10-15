@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { EmailLink, LegalContactDetails, LegalPage, type LegalSection } from "@/components/legal-page";
 import { contactDetails } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
   description:
     "How ClimeNergies Consulting Hub collects, uses, shares and protects personal data, and the rights you have under the Nigeria Data Protection Act 2023.",
-};
+  path: "/privacy",
+});
 
 const sections: LegalSection[] = [
   {

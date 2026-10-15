@@ -49,6 +49,37 @@ export const heroSlides = [
   },
 ];
 
+/** Hero copy for the inner pages. Each page's title, description and share image reuse it. */
+export const pageHeroes = {
+  about: {
+    image: "/assets/about-page/Heropage Slide 3_shutterstock_533448412 (2).jpg",
+    alt: "A light bulb reflecting wind turbines in front of a solar farm and green hills",
+    title: ["About", "ClimeNergies."],
+    subtitle: "Advisory Built for Africa's Sustainable Future.",
+  },
+  practiceAreas: {
+    image: "/assets/practice-areas/Market Eco-System Development (2).jpg",
+    alt: "A glowing green globe centred on the African continent, connected by a network of points",
+    title: ["Connected Expertise."],
+    subtitle: "Six specialist practices. Four threads. One integrated approach.",
+  },
+  blog: {
+    image: "/assets/blog/iStock-1201144154.jpg",
+    alt: "Colleagues in discussion around a tablet and printed charts",
+    title: ["Our Blog."],
+    subtitle: "Local insights and global perspective on energy, climate, critical minerals and industrial transition.",
+  },
+  contact: {
+    image: "/assets/contact/Investment & Climate Finance (1).jpg",
+    alt: "A green light bulb and a young leaf beside stacks of coins",
+    title: ["Let's Talk."],
+    subtitle: "Tell us what you're working on. We'll tell you how we can help.",
+  },
+};
+
+/** The team page has no photo hero, just this heading. */
+export const teamHeading = ["Led By Expertise.", "Backed By A Powerful Network."];
+
 export type PracticeArea = {
   slug: string;
   title: string;

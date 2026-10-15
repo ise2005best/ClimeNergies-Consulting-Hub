@@ -1,24 +1,49 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { Container, Eyebrow, SectionHeading, buttonClasses } from "@/components/ui";
-import { digests } from "@/lib/content";
+import { digests, pageHeroes } from "@/lib/content";
+import { absoluteUrl, heroTitle, organizationRef, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Analysis and perspectives on Africa's energy, climate, and industrial transition from the ground up, including The ClimeNergies Digest monthly news roundup.",
-};
+const hero = pageHeroes.blog;
+
+export const metadata: Metadata = pageMetadata({
+  title: heroTitle(hero.title),
+  description: hero.subtitle,
+  path: "/blog",
+  keywords: [
+    "The ClimeNergies Digest",
+    "Africa energy news",
+    "Nigeria energy news roundup",
+    "monthly energy and climate newsletter",
+    "oil and gas news Nigeria",
+    "critical minerals news Africa",
+  ],
+});
 
 export default function BlogPage() {
   return (
     <>
-      <PageHero
-        image="/assets/blog/iStock-1201144154.jpg"
-        alt="Colleagues in discussion around a tablet and printed charts"
-        title={["Our Blog."]}
-        subtitle="Local insights and global perspective on energy, climate, critical minerals and industrial transition."
+      <JsonLd
+        data={{
+          "@type": "CollectionPage",
+          url: absoluteUrl("/blog"),
+          name: heroTitle(hero.title),
+          description: hero.subtitle,
+          hasPart: digests.map((digest) => ({
+            "@type": "CreativeWork",
+            name: digest.title,
+            description: digest.excerpt,
+            url: absoluteUrl(digest.href),
+            image: absoluteUrl(digest.cover),
+            encodingFormat: "application/pdf",
+            isPartOf: { "@type": "Periodical", name: "The ClimeNergies Digest" },
+            publisher: organizationRef,
+          })),
+        }}
       />
+      <PageHero image={hero.image} alt={hero.alt} title={hero.title} subtitle={hero.subtitle} />
 
       <section className="py-16">
         <Container>

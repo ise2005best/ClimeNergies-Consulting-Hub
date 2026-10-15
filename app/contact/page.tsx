@@ -1,25 +1,39 @@
 import type { Metadata } from "next";
 import { FaLinkedin } from "react-icons/fa6";
 import { ContactForm } from "@/components/contact-form";
+import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { ButtonLink, Container, Eyebrow, SectionHeading } from "@/components/ui";
-import { contactDetails } from "@/lib/content";
+import { contactDetails, pageHeroes } from "@/lib/content";
+import { absoluteUrl, heroTitle, organizationJsonLd, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Tell us what you're working on. Contact ClimeNergies Consulting Hub in Lagos for advisory across Africa's energy, climate, and industrial transformation.",
-};
+const hero = pageHeroes.contact;
+
+export const metadata: Metadata = pageMetadata({
+  title: heroTitle(hero.title),
+  description: hero.subtitle,
+  path: "/contact",
+  keywords: ["contact ClimeNergies", "energy consultants Lagos", "climate advisory enquiry"],
+});
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@type": "ContactPage",
+          url: absoluteUrl("/contact"),
+          name: heroTitle(hero.title),
+          description: hero.subtitle,
+          mainEntity: organizationJsonLd,
+        }}
+      />
       <PageHero
-        image="/assets/contact/Investment & Climate Finance (1).jpg"
-        alt="A green light bulb and a young leaf beside stacks of coins"
+        image={hero.image}
+        alt={hero.alt}
         imagePosition="object-[30%_center]"
-        title={["Let's Talk."]}
-        subtitle="Tell us what you're working on. We'll tell you how we can help."
+        title={hero.title}
+        subtitle={hero.subtitle}
         actions={
           <>
             <ButtonLink href="/about">About</ButtonLink>

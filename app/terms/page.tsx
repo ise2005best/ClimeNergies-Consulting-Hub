@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EmailLink, LegalContactDetails, LegalPage, type LegalSection } from "@/components/legal-page";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms of Service",
   description:
     "The terms that govern your use of the ClimeNergies Consulting Hub website, including The ClimeNergies Digest.",
-};
+  path: "/terms",
+});
 
 const sections: LegalSection[] = [
   {

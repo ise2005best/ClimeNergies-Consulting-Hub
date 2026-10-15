@@ -1,21 +1,39 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { JsonLd } from "@/components/json-ld";
 import { LinkedInLink } from "@/components/linkedin-link";
 import { Container, Eyebrow, Prose, SectionHeading } from "@/components/ui";
-import { team } from "@/lib/content";
+import { team, teamHeading } from "@/lib/content";
+import { absoluteUrl, heroTitle, organizationRef, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Team",
+// The heading has no subtitle under it, so the description is written for search results.
+export const metadata: Metadata = pageMetadata({
+  title: heroTitle(teamHeading),
   description:
     "Meet the senior advisers behind ClimeNergies: decades of experience across energy law, transactions, venture investment, project origination, and climate policy in Africa.",
-};
+  path: "/team",
+  keywords: ["ClimeNergies team", "energy advisers Africa", "climate experts Nigeria", ...team.map((m) => m.name)],
+});
 
 export default function TeamPage() {
   return (
     <section className="pt-36 pb-16 sm:pt-44">
+      <JsonLd
+        data={{
+          "@graph": team.map((member) => ({
+            "@type": "Person",
+            name: member.name,
+            jobTitle: member.role,
+            image: absoluteUrl(member.image),
+            url: absoluteUrl(`/team#${member.slug}`),
+            sameAs: member.linkedin ? [member.linkedin] : undefined,
+            worksFor: organizationRef,
+          })),
+        }}
+      />
       <Container>
         <Eyebrow>The Team</Eyebrow>
-        <SectionHeading as="h1" lines={["Led By Expertise.", "Backed By A Powerful Network."]} />
+        <SectionHeading as="h1" lines={teamHeading} />
 
         <div className="mt-16 space-y-16">
           {team.map((member, i) => (
