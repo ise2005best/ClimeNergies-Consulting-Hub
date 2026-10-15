@@ -8,7 +8,7 @@ import { LuArrowRight, LuMinus, LuPlus } from "react-icons/lu";
 type Item = { title: string; description: string; href?: string };
 
 export function Accordion({ items, className = "" }: { items: Item[]; className?: string }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const id = useId();
 
   return (

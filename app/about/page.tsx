@@ -20,7 +20,7 @@ export default function AboutPage() {
       <PageHero
         image="/assets/about-page/Heropage Slide 3_shutterstock_533448412 (2).jpg"
         alt="A light bulb reflecting wind turbines in front of a solar farm and green hills"
-        title={["About", "ClimeNergies"]}
+        title={["About", "ClimeNergies."]}
         subtitle="Advisory Built for Africa's Sustainable Future."
         actions={
           <>

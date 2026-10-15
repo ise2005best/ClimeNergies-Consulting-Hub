@@ -29,7 +29,7 @@ export const heroSlides = [
     alt: "Two engineers in hard hats reviewing plans at a large solar installation",
     headline: ["From Policy to Projects.", "From Vision to Value."],
     subheadline:
-      "Integrated advisory across Africa's energy, climate, and industrial transformation.",
+      "Integrated advisory across Africa's energy, climate, resource and industrial transformation.",
     position: "object-center",
   },
   {
@@ -37,15 +37,15 @@ export const heroSlides = [
     alt: "A team in green shirts discussing a wind turbine model around a table",
     headline: ["Advisory Built for Africa.", "Grounded in Execution."],
     subheadline:
-      "From ambition to delivery across Africa's energy, climate and industrial economy.",
+      "From ambition to delivery across Africa's energy, climate, critical minerals and industrial economy.",
     position: "object-center",
   },
   {
     image: "/assets/carousel/Latest Heroslide 3.jpg",
     alt: "A glowing green globe centred on the African continent, connected by a network of points",
-    headline: ["Connecting Capital ,", "Innovation and Ecosystems."],
+    headline: ["Connecting Capital,", "Innovation and Ecosystems."],
     subheadline:
-      "Turning promising energy, climate and resource solutions into investable, scalable businesses.",
+      "We turn promising energy, climate and resource solutions into investable, scalable businesses.",
     position: "object-center",
   },
 ];
@@ -105,7 +105,7 @@ export const practiceAreas: PracticeArea[] = [
     slug: "power-energy-access",
     title: "Power & Energy Access",
     description:
-      "We advise governments, utilities, developers and investors across the power value chain, from grid-scale generation to off-grid access, on sector reform, regulation, renewables integration and transition finance, helping build bankable markets and close clean energy deals.",
+      "We advise governments, utilities, developers and investors on sector reform, regulation, renewables integration and transition finance. Working across the power value chain, from grid-scale generation to off-grid access, we help build bankable markets and close clean energy deals.",
     tagline: "Derisking Africa's Power Systems, From Policy to Execution.",
     intro: [
       "Africa's power gap is not just a technology challenge. Fragmented regulation, weak offtake structures, grid constraints, and limited legal certainty continue to hold back investment and delivery.",
@@ -384,7 +384,7 @@ export const coreValues = [
   {
     title: "Knowledge & Capacity Building",
     description:
-      "We build local expertise and capability for Africa's energy, climate and industrial future.",
+      "We build local expertise and capability for Africa's energy, climate, resource, and industrial future.",
   },
 ];
 
@@ -402,7 +402,7 @@ export const clientGroups = [
   {
     title: "Capital Providers, Developers & Innovators",
     description:
-      "Investors, VC funds, commercial banks, project developers, IPPs, clean-tech innovators, accelerators, and innovation hubs.",
+      "Investors, VC funds, commercial and regional banks, project developers, IPPs, clean & climate tech innovators, accelerators, and innovation hubs.",
   },
   {
     title: "International Partners",
@@ -416,13 +416,13 @@ export const approach = [
     title: "Diagnose",
     icon: "search",
     description:
-      "We begin every engagement with a rigorous diagnosis of the client's unique context, analyzing market positioning, capital availability, regulatory dynamics, and political economy to build analytically grounded and actionable strategies.",
+      "Every engagement starts with a close diagnosis of your context: your market position, access to capital, and the regulatory and political forces shaping your options. Then we build your strategy.",
   },
   {
     title: "Architect",
     icon: "compass",
     description:
-      "Strategy without architecture is aspiration. We build, alongside our clients, integrated, sequenced recommendations that simultaneously account for commercial viability, regulatory alignment, stakeholder dynamics, and implementation capacity.",
+      "Strategy without architecture is only aspiration. Together with our clients, we build plans that hold up commercially, fit the regulation, bring stakeholders along and can actually be delivered.",
   },
   {
     title: "Execute",
@@ -434,7 +434,7 @@ export const approach = [
 
 export const mission = {
   title: "Turning Ambition Into Action",
-  body: "To close the gap between ambition and execution through integrated advisory that unlocks capital and turns Africa's energy, climate, and industrial potential into lasting value.",
+  body: "To close the gap between ambition and execution through integrated advisory that unlocks capital and turns Africa's energy, climate, resource, and industrial potential into lasting value.",
 };
 
 export const vision = {
@@ -467,7 +467,7 @@ export const team: TeamMember[] = [
       "Previously, as Global Investment Professional and Ventures Lead for Africa at Siemens Energy Ventures, she deployed over €50 million into green hydrogen, Power-to-X and climate technologies, and established the firm's venture presence in its leading African markets.",
       "As pioneer Country General Counsel at Siemens Nigeria, she led legal execution on anchor national infrastructure programmes, including the Presidential Power Initiative, the Geregu II expansion and the landmark 461 MW Azura-Edo IPP, Nigeria's first privately financed gas plant. She began her career in energy and tax advisory at Deloitte and EY.",
       "A 2024 Yale Climate Leaders Fellow, she serves on the NESG Industrial Policy Commission and the Lagos Climate Network Advisory Board, while mentoring clean-tech founders through Techstars, Village Capital, Rising Tide Africa and the AFARA Accelerator.",
-      "She is a Fellow of the Chartered Institute of Taxation and the Institute of Chartered Secretaries of Nigeria, and holds an MBA from Cambridge Judge Business School, an LLM in Petroleum Law and Policy from the University of Dundee, and an LLB from the University of Lagos.",
+      "She is a Fellow of the Chartered Institute of Taxation of Nigeria, Associate member of the Institute of Chartered Secretaries & Administrators of Nigeria. She holds an MBA from Universite Of Cambridge, an LLM in Petroleum Law and Policy from the University of Dundee, Scotland and an LLB from the University of Lagos.",
     ],
   },
   {
@@ -508,9 +508,9 @@ export const founderFullName = "Adedoyin ('Doyin') Pearse";
 
 export const founderIntro = [
   `${founderFullName} is a senior energy executive, lawyer, and strategic adviser with over 25 years of experience across oil and gas, power, renewables, energy transition, climate-tech investing, and resource governance spanning Africa and global markets.`,
-  "She began her career in legal practice at The Law Union before building advisory expertise at EY and Deloitte, and went on to serve as pioneer General Counsel at Siemens Energy Nigeria, leading transaction advisory on landmark projects including the Azura Power Plant (461 MW), Geregu II (434 MW), and the Siemens Federal Government Presidential Power Initiative.",
+  "She began her career in law practice at The Law Union before building advisory expertise at EY and Deloitte, and went on to serve as pioneer Country General Counsel at Siemens Nigeria, leading transaction advisory on landmark projects including the Azura Power Plant (461 MW), Geregu II (434 MW), and the Siemens Federal Government Presidential Power Initiative.",
   "As Global Investment Professional and Ventures Lead, Africa, at Siemens Energy Ventures, she contributed to over €50M in clean energy and climate-tech investments across hydrogen, Power-to-X, and carbon management. She founded ClimeNergies to bring that depth of experience directly to Africa's most consequential energy, resource, and industrial challenges.",
-  "A 2024 Yale Climate Leaders Fellow, she holds an MBA from Cambridge Judge Business School, an LLM in Petroleum Law and Policy from the University of Dundee, and a law degree from the University of Lagos.",
+  "A 2024 Yale Climate Leaders Fellow, she holds an MBA from the University of Cambridge, an LLM in Petroleum Law and Policy from the University of Dundee, Scotland, and a law degree from the University of Lagos.",
 ];
 
 /** Every issue of The ClimeNergies Digest, newest first. Covers are the first page of each PDF. */
@@ -588,7 +588,7 @@ const digestFor = (date: string) => {
 
 /** The three cards in the "Insights & Perspective" section. They show the same covers as the blog page. */
 export const insights = [
-  digestFor("July 2026"),
-  digestFor("August 2026"),
   digestFor("September 2026"),
+  digestFor("August 2026"),
+  digestFor("July 2026"),
 ];

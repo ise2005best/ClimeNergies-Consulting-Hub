@@ -68,15 +68,16 @@ export default function ContactPage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-forest-600">LinkedIn</dt>
-                <dd className="mt-0.5">
+                <dt className="sr-only">LinkedIn</dt>
+                <dd>
                   <a
                     href={contactDetails.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-forest-900 underline-offset-4 hover:underline"
                   >
-                    ClimeNergies Consulting Hub
+                    <FaLinkedin className="size-6 shrink-0" aria-hidden />
+                    LinkedIn
                     <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                 </dd>

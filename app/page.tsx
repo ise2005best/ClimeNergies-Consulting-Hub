@@ -109,7 +109,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <Eyebrow>What We Do</Eyebrow>
-              <SectionHeading lines={["Integrated Advisory.", "Delivered Across Six Practice Areas."]} />
+              <SectionHeading lines={["Integrated Advisory Across", "Six Practice Areas."]} />
             </div>
             <ButtonLink href="/practice-areas" size="sm">
               Explore Our Practice Areas
@@ -162,7 +162,7 @@ export default function HomePage() {
           <Eyebrow>Who We Work With</Eyebrow>
           <SectionHeading
             lines={[
-              "We Work With The Leaders Transforming Africa's",
+              "The Leaders Transforming Africa's",
               "Energy, Climate, And Industrial Landscape.",
             ]}
           />

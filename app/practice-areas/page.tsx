@@ -35,11 +35,11 @@ export default function PracticeAreasPage() {
           <SectionHeading lines={["Our Practice Areas"]} />
           <Prose className="mt-6 max-w-5xl">
             <p>
-              Our practice is organised around six focus areas at the forefront of Africa&apos;s energy, resource,
-              industrial, and climate future.
+              Our practice is organised around six focus areas at the forefront of Africa&apos;s energy, climate, resource,
+             and industrial future.
             </p>
             <p>
-              The challenges we work on rarely fit neatly into one discipline, so we look at every mandate through
+              The engagements we work on rarely fit neatly into one discipline, so we look at every mandate through
               four connected lenses:
             </p>
           </Prose>

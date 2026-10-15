@@ -30,7 +30,7 @@ export default async function PracticeAreaPage({ params }: PageProps<"/practice-
 
   return (
     <>
-      <PageHero image={area.image} alt={area.imageAlt} title={[area.title]} />
+      <PageHero image={area.image} alt={area.imageAlt} title={[`${area.title}.`]} />
 
       <section className="py-16">
         <Container>
